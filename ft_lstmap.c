@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vintran <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/09 18:50:41 by vintran           #+#    #+#             */
-/*   Updated: 2020/09/09 19:14:02 by vintran          ###   ########.fr       */
+/*   Created: 2021/01/04 12:26:42 by vintran           #+#    #+#             */
+/*   Updated: 2021/01/04 15:01:22 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list		*res;
 	t_list		*new;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (NULL);
 	res = NULL;
 	while (lst)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vintran <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 17:00:33 by vintran           #+#    #+#             */
-/*   Updated: 2020/09/07 17:00:53 by vintran          ###   ########.fr       */
+/*   Created: 2021/01/04 12:16:54 by vintran           #+#    #+#             */
+/*   Updated: 2021/01/07 17:15:29 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(const char *str)
 {
-	size_t	i;
-	int		res;
-	int		sign;
+	size_t		i;
+	long int	res;
+	int			sign;
 
 	i = 0;
 	res = 0;
@@ -34,5 +34,5 @@ int		ft_atoi(const char *str)
 		res = res * 10 + str[i] - '0';
 		i++;
 	}
-	return (res * sign);
+	return ((int)(res * sign));
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vintran <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 17:05:27 by vintran           #+#    #+#             */
-/*   Updated: 2020/09/09 16:37:52 by vintran          ###   ########.fr       */
+/*   Created: 2021/01/04 12:33:52 by vintran           #+#    #+#             */
+/*   Updated: 2021/01/05 15:41:32 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	int len;
 
-	i = (int)ft_strlen(s);
-	while (i >= 0)
+	len = (int)ft_strlen(s);
+	while (len >= 0)
 	{
-		if (s[i] == c)
-			return ((char *)&s[i]);
-		i--;
+		if (s[len] == c)
+			return ((char *)&s[len]);
+		len--;
 	}
 	return (NULL);
 }

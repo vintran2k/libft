@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vintran <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/07 17:03:40 by vintran           #+#    #+#             */
-/*   Updated: 2020/09/08 19:05:07 by vintran          ###   ########.fr       */
+/*   Created: 2021/01/04 12:28:39 by vintran           #+#    #+#             */
+/*   Updated: 2021/01/04 12:41:22 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t i;
 
 	i = 0;
-	if (!dst && !src)             // || && ?
+	if (!dst && !src)
 		return (NULL);
 	while (i < n)
 	{

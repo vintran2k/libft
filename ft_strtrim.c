@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vintran <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/08 13:00:28 by vintran           #+#    #+#             */
-/*   Updated: 2020/09/08 13:05:56 by vintran          ###   ########.fr       */
+/*   Created: 2021/01/04 12:34:10 by vintran           #+#    #+#             */
+/*   Updated: 2021/01/05 15:49:18 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,25 +15,23 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*res;
-	size_t	beg;
-	size_t	end;
-	size_t	s1len;
+	size_t	i;
+	size_t	len;
 
 	res = NULL;
 	if (!set && s1)
 		res = ft_strdup(s1);
 	else if (s1)
 	{
-		beg = 0;
-		s1len = ft_strlen(s1);
-		end = s1len;
-		if (s1len)
-			end--;
-		while (s1[beg] && ft_strchr(set, s1[beg]))
-			beg++;
-		while (end >= 0 && ft_strchr(set, s1[end]))
-			end--;
-		res = ft_substr(s1, beg, (end - beg + 1));
+		i = 0;
+		len = ft_strlen(s1);
+		if (len)
+			len--;
+		while (s1[i] && ft_strchr(set, s1[i]))
+			i++;
+		while (len >= 0 && ft_strchr(set, s1[len]))
+			len--;
+		res = ft_substr(s1, i, (len - i + 1));
 	}
 	return (res);
 }

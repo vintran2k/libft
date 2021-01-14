@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
+/*   By: vintran <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/09 18:38:30 by vintran           #+#    #+#             */
-/*   Updated: 2020/09/09 18:42:11 by vintran          ###   ########.fr       */
+/*   Created: 2021/01/04 12:25:02 by vintran           #+#    #+#             */
+/*   Updated: 2021/01/04 14:48:52 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (*lst && del)
+	if (*lst)
 	{
 		ft_lstclear(&(*lst)->next, del);
 		ft_lstdelone(*lst, del);

@@ -1,3 +1,5 @@
+NAME        = libft.a
+
 SRCS		=	ft_memset.c			\
 				ft_bzero.c			\
 				ft_memcpy.c			\
@@ -32,8 +34,8 @@ SRCS		=	ft_memset.c			\
 				ft_putstr_fd.c		\
 				ft_putendl_fd.c		\
 				ft_putnbr_fd.c		\
-		
-OBJS		= ${SRCS:.c=.o}
+
+OBJS		= $(SRCS:.c=.o)
 
 SRCSBONUS	=	ft_lstnew.c			\
 				ft_lstadd_front.c	\
@@ -45,9 +47,7 @@ SRCSBONUS	=	ft_lstnew.c			\
 				ft_lstiter.c		\
 				ft_lstmap.c			\
 
-OBJSBONUS	= ${SRCSBONUS:.c=.o}
-
-NAME		= libft.a
+OBJSBONUS	= $(SRCSBONUS:.c=.o)
 
 CC			= gcc
 
@@ -55,22 +55,22 @@ CFLAGS      = -Wall -Wextra -Werror
 
 RM			= rm -f
 
-.c.o:		
-			${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+.c.o:
+			$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-${NAME}:	${OBJS}
-			ar rc ${NAME} ${OBJS}
+all:		$(NAME)
 
-bonus:		${OBJS} ${OBJSBONUS}
-			ar rc ${NAME} ${OBJS} ${OBJSBONUS}
+$(NAME):	$(OBJS)
+			ar rc $(NAME) $(OBJS)
 
-all:		${NAME}
+bonus:		$(OBJS) $(OBJSBONUS)
+			ar rc $(NAME) $(OBJS) $(OBJSBONUS)
 
-clean:		
-			${RM} ${OBJS} ${OBJSBONUS}
+clean:
+			$(RM) $(OBJS) $(OBJSBONUS)
 
 fclean:		clean
-			${RM} ${NAME}
+			$(RM) $(NAME)
 
 re:			fclean all
 
