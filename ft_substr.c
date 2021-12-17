@@ -3,30 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vintran <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 12:34:34 by vintran           #+#    #+#             */
-/*   Updated: 2021/01/06 14:38:30 by vintran          ###   ########.fr       */
+/*   Updated: 2021/12/17 14:01:02 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, int len)
 {
 	char	*res;
-	size_t	slen;
+	int		slen;
 
 	if (!s)
 		return (NULL);
 	slen = ft_strlen(s);
 	if (len > slen)
 		len = slen;
-	if (start > slen)
+	if (start > (unsigned int)slen)
 		start = (unsigned int)slen;
-	if (start + len > slen)
+	if (start + len > (unsigned int)slen)
 		len = slen - start;
-	if (!(res = malloc(sizeof(char) * (len + 1))))
+	res = malloc(sizeof(char) * (len + 1));
+	if (!res)
 		return (NULL);
 	ft_memmove(res, s + start, len);
 	res[len] = '\0';

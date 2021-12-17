@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vintran <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 12:34:10 by vintran           #+#    #+#             */
-/*   Updated: 2021/01/05 15:49:18 by vintran          ###   ########.fr       */
+/*   Updated: 2021/12/17 13:51:57 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*res;
-	size_t	i;
-	size_t	len;
+	int		i;
+	int		len;
 
 	res = NULL;
 	if (!set && s1)

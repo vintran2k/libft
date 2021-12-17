@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vintran <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 12:32:36 by vintran           #+#    #+#             */
-/*   Updated: 2021/01/05 13:15:29 by vintran          ###   ########.fr       */
+/*   Updated: 2021/12/17 13:55:53 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcpy(char *dest, const char *src, size_t dstsize)
+int	ft_strlcpy(char *dest, const char *src, int dstsize)
 {
-	size_t i;
-	size_t srclen;
+	int	i;
+	int	srclen;
 
 	if (!dest || !src)
 		return (0);

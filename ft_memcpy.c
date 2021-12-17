@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vintran <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vintran <vintran@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 12:28:39 by vintran           #+#    #+#             */
-/*   Updated: 2021/01/04 12:41:22 by vintran          ###   ########.fr       */
+/*   Updated: 2021/12/17 13:54:37 by vintran          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, int n)
 {
-	size_t i;
+	int	i;
 
 	i = 0;
 	if (!dst && !src)
